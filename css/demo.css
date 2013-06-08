@@ -1,0 +1,156 @@
+/*------------------------------------*\
+ *  UI Elements
+\*------------------------------------*/
+html {
+  height: 100%;
+  background-color: #fff;
+}
+body {
+  font: normal .65em 'Oswald', sans-serif;
+  color: #7c8ea6;
+
+  text-align: center;
+
+  margin: 0;
+  padding: 1em;
+
+  min-height: 100%;
+  background-color: transparent;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIFdpbmRvd3MiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzVDRDQwMTlGRDcxMTFFMDg3M0VCOUIxMTMxMUYyMTIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzVDRDQwMUFGRDcxMTFFMDg3M0VCOUIxMTMxMUYyMTIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3NUNENDAxN0ZENzExMUUwODczRUI5QjExMzExRjIxMiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3NUNENDAxOEZENzExMUUwODczRUI5QjExMzExRjIxMiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PhhM2dUAAAA+SURBVHjaYvj//78UEDMQwFJwBj5FIBpDAJsidIXoilE0MoJVowIpKP0MWZCJgVhArNUke4ao4CEqwAECDAD1ovSxzBb1FAAAAABJRU5ErkJggg%3D%3D);
+
+  /* For smooth responsive resizing */
+  transition:all .2s linear; 
+  -o-transition:all .2s linear; 
+  -moz-transition:all .2s linear; 
+  -webkit-transition:all .2s linear;
+}
+
+/* For Responsive debugging - toggle display property value to show/hide */
+body::before{
+  display: none;
+  content: "Before 480px";
+  font-weight: bold;
+  text-align: center;
+  background: rgba(255,255,0, 0.9);   /* Semi-transparent yellow */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oswald Regular'), local('Oswald-Regular'), url(http://themes.googleusercontent.com/static/fonts/oswald/v7/-g5pDUSRgvxvOl5u-a_WHw.woff) format('woff');
+}
+
+h1 {
+  color: #B8BAC2;
+  text-shadow: 0 1px 1px #fff;
+}
+
+a {
+  color: grey;
+}
+a:hover {
+  color: #ccc;
+}
+
+/*------------------------------------*\
+ *  Resize me image
+\*------------------------------------*/
+#resize {
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+
+/*------------------------------------*\
+ *  Social buttons (like Tweet, G+ etc.)
+\*------------------------------------*/
+.social-buttons {
+  position: absolute;
+  top: 1.4em;
+  left: 1.6em;
+}
+
+/* Hide Social buttons, Resize and Github ribbons for small screens*/
+#resize,
+#github,
+.social-buttons {
+  display: none;
+}
+
+
+/* Clearfix */
+/* For modern browsers */
+.clearfix:before,
+.clearfix:after {
+    content:"";
+    display:table;
+}
+
+.clearfix:after {
+    clear:both;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+.clearfix {
+    *zoom:1;
+}
+
+/*------------------------------------*\
+ *  Responsive queries
+\*------------------------------------*/
+/* Small Tablet / Blackberry / Newer iPhone */
+@media only screen and (min-width: 460px) {
+  body {
+    font-size: .7em;
+  }
+  body::before{ content: "min-width: 480px"; }
+  
+  /* Show GitHub ribbon */
+  #github {
+    display: block;
+  }
+}
+
+/* Tablet - Portrait */
+@media only screen and (min-width: 740px) {
+  body {
+    font-size: .85em;
+  }
+
+  /* Show resize corner */
+  #resize {
+    display: block;
+  }
+
+  body::before{ content: "min-width: 768px"; }
+}
+/* Tablet - Landscape */
+@media only screen and (min-width: 992px) {
+  body {
+    font-size: .9em;
+  }
+  body::before{ content: "min-width: 992px"; }
+
+  /* Show Social buttons */
+  .social-buttons {
+    display: block;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1200px) {
+  body {
+    font-size: 1em;
+  }
+  body::before{ content: "min-width: 1200px"; }
+}
