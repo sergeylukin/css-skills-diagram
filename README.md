@@ -28,3 +28,8 @@ Demo
 ====
 
 http://sergeylukin.com/css-skills-diagram
+
+Screenshot
+==========
+
+![tabs](https://raw.github.com/sergeylukin/css-skills-diagram/gh-pages/img/screen-skills-diagram.jpg)
