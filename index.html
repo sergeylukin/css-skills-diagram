@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="css/demo.css" rel="stylesheet" />
+  <link href="css/ladda.css" rel="stylesheet" />
   <link href="css/rainbow.github.css" rel="stylesheet" />
   <link href="css/skills-diagram.css" rel="stylesheet" />
 </head>
@@ -43,7 +44,10 @@
 </select>
 <label for="cb-username">of coderbits.com/</label>
 <input type="text" id="cb-username" placeholder="<coderbits username>" />
-<input type="submit" />
+<button class="ladda-button red zoom-in">
+  <span class="ladda-label">Submit</span>
+  <span class="ladda-spinner"></span>
+</button>
 </form>
 
 <dl class="skills-diagram" data-cb-username="scott" data-cb-subject="languages"></dl>
@@ -191,6 +195,10 @@ var disqus_shortname = 'sergeylukin',
 
 <!-- Rainbow Syntax Highlighter -->
 <script src="js/rainbow-custom.min.js"></script>
+
+<!-- Ladda button -->
+<script src="js/ladda.js"></script>
+<script src="js/spin.js"></script>
 
 <script src="js/jquery-1.10.1.min.js"></script>
 

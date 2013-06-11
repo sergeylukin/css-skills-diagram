@@ -5,10 +5,14 @@
  * based on Coderbits.com feed
  *
  **/
-var CBSkillsDiagram = function( container ) {
+var CBSkillsDiagram = function( options, callback ) {
+  // TODO: filter and treat options argument a bit better
+  var container = options.container;
+
   this.username  = container.data('cb-username');
   this.subject   = container.data('cb-subject') || 'skills';
   this.container = container;
+  this.callback = callback;
   this.init();
 };
 CBSkillsDiagram.prototype.init = function() {
@@ -59,12 +63,17 @@ CBSkillsDiagram.prototype.createDom = function(data) {
     $('<dt class="skill-' + item.level + '">' + item.name + '</dt>').appendTo(__self.container);
     $('<dd>' + item.score + '</dd>').appendTo(__self.container); 
   }
+
+  // call callback
+  if( typeof __self.callback === 'function' ) {
+    __self.callback.call( null, __self );
+  }
   
 };
 
 // Activate all diagrams
 $(function() {
   $('.skills-diagram[data-cb-username]').each(function() {
-    new CBSkillsDiagram( $(this) );
+    new CBSkillsDiagram( { container: $(this) } );
   });
 });

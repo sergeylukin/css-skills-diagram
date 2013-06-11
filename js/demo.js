@@ -7,11 +7,20 @@ $(function() {
 
   /* Register form events */
   $('#cb-diagram-form').submit(function(e) {
-    
     e.preventDefault();
-    
-    diagramEl.data('cb-username', $('#cb-username').val());
-    diagramEl.data('cb-subject', $('#cb-subject').val());
-    new CBSkillsDiagram( diagramEl );
   });
+
+  // Activate Ladda button
+  Ladda.bind( 'button.ladda-button', {
+    callback: function(instance) {
+      console.log('clicked and submitted');
+      diagramEl.data('cb-username', $('#cb-username').val());
+      diagramEl.data('cb-subject', $('#cb-subject').val());
+      new CBSkillsDiagram( { container: diagramEl }, function() {
+        instance.stop();
+      });
+    }
+  });
+
 });
+
