@@ -31,13 +31,15 @@ CBSkillsDiagram.prototype.createDom = function(data) {
       attributes = data[subj].sort(function(a,b) {
         return b.count - a.count;
       }),
-      items = []
+      items = [],
+      total_score = 0;
   
   
   skill_level = 10; // begin with biggest skill level
   for (item in attributes) {
     item = attributes[item];
-    items.push({name: item.name, count: item.count, level: skill_level});    
+    items.push({name: item.name, score: item.count, level: skill_level});    
+    total_score += item.count;
     skill_level--;
   }
   
@@ -50,8 +52,12 @@ CBSkillsDiagram.prototype.createDom = function(data) {
   // Render
   for (var i = 0; i < items.length; i++) {
     item = items[i];
+
+    // Ignore too low score..
+    if( item.score / total_score * 100 < 1 ) continue;
+
     $('<dt class="skill-' + item.level + '">' + item.name + '</dt>').appendTo(__self.container);
-    $('<dd>' + item.count + '</dd>').appendTo(__self.container); 
+    $('<dd>' + item.score + '</dd>').appendTo(__self.container); 
   }
   
 };
