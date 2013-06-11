@@ -52,15 +52,15 @@
 
 <ol>
   <li>Download and include <a href="http://sergeylukin.com/css-skills-diagram/css/skills-diagram.css">skills-diagram.css</a>
-    <pre><code data-language="html"><link rel="stylesheet"
+    <pre><code data-language="html">&lt;link rel="stylesheet"
     href="/css/skills-diagram.css" /></code></pre>
   </li>
   <li>Download and include <a
     href="http://sergeylukin.com/css-skills-diagram/js/skills-diagram.coderbits.js">skills-diagram.coderbits.js</a> (requires jQuery)
-    <pre><code data-language="html">&lt;script src="/js/skills-diagram.coderbits.js"></script></code></pre>
+    <pre><code data-language="html">&lt;script src="/js/skills-diagram.coderbits.js">&lt;/script></code></pre>
   </li>
   <li>Wherever you wish to show the diagram widget, include following HTML:
-    <pre><code data-language="html">&lt;dl class="skills-diagram" data-cb-username="USERNAME" data-cb-subject="SUBJECT"></dl>
+    <pre><code data-language="html">&lt;dl class="skills-diagram" data-cb-username="USERNAME" data-cb-subject="SUBJECT">&lt;/dl>
 </code></pre>
     Replace username and subject accordingly. Subject is one of following at
     the moment of writing (refer to API to see if there are more):
@@ -97,11 +97,11 @@
 
 <ol>
   <li>Download and include <a href="http://sergeylukin.com/css-skills-diagram/css/skills-diagram.css">skills-diagram.css</a>
-    <pre><code data-language="html"><link rel="stylesheet"
+    <pre><code data-language="html">&lt;link rel="stylesheet"
     href="/css/skills-diagram.css" /></code></pre>
   </li>
   <li>Wherever you wish to show the diagram, include HTML similar to following:
-    <pre><code data-language="html"><dl class="skills-diagram">
+    <pre><code data-language="html">&lt;dl class="skills-diagram">
   <dt class="skill-5">UNIX</dt>
   <dd>5</dd>
   <dt class="skill-10">Ruby</dt>
@@ -120,8 +120,7 @@
   <dd>9</dd>
   <dt class="skill-2">C#</dt>
   <dd>2</dd>
-</dl>
-</code></pre>
+&lt;/dl></code></pre>
   </li>
 </ol>
 
