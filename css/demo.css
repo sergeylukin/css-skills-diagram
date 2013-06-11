@@ -472,6 +472,12 @@ color: #BEBB66;
 background-color: #FFFFD7;
 }
 
+/* Disqus block */
+#disqus_thread {
+  color: #585858;
+  margin-top: 3em;
+}
+
 /*------------------------------------*\
  *  Resize me image
 \*------------------------------------*/
