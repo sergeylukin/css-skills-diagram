@@ -4,14 +4,73 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width; initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
-
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="css/demo.css" rel="stylesheet" />
+  <link href="css/rainbow.github.css" rel="stylesheet" />
   <link href="css/skills-diagram.css" rel="stylesheet" />
 </head>
-<body>
+<body class="cf">
 
-<h1>Pure CSS Skills Diagram</h1>
+<h1 class="center">CSS Skills Diagram</h1>
+
+<h2>Key features:</h2>
+
+<ul>
+  <li>Mobile-ready</li>
+  <li>Core is done in pure CSS</li>
+  <li>Pieces are not tightly coupled</li>
+  <li>Can easily work with external data sources</li>
+</ul>
+
+<h2>Live data demo</h2>
+
+<p>This demo is powered with a tiny Javascript that retrieves data from
+<a href="http://coderbits.com">coderbits.com</a> profile <a href="https://coderbits.com/api">API</a> and pushes it into the diagram. See it in action:</p>
+
+<p class="tip"><strong>Tip:</strong> diagram will look different every time you submit the form</p>
+
+<form id="cb-diagram-form">
+<label for="cb-subject">Display</label>
+<select id="cb-subject">
+  <option value="skills">Skills</option>
+  <option value="languages">Languages</option>
+  <option value="environments">Environments</option>
+  <option value="frameworks">Frameworks</option>
+  <option value="tools">Tools</option>
+  <option value="interests">Interests</option>
+  <option value="traits">Traits</option>
+  <option value="areas">Areas</option>
+</select>
+<label for="cb-username">of coderbits.com/</label>
+<input type="text" id="cb-username" placeholder="<coderbits username>" />
+<input type="submit" />
+</form>
+
+<dl class="skills-diagram" data-cb-username="scott" data-cb-subject="languages"></dl>
+
+<h3>Usage</h3>
+
+<ol>
+  <li>Download and include <a href="http://sergeylukin.com/css-skills-diagram/css/skills-diagram.css">skills-diagram.css</a>
+    <pre><code data-language="html"><link rel="stylesheet"
+    href="/css/skills-diagram.css" /></code></pre>
+  </li>
+  <li>Download and include <a
+    href="http://sergeylukin.com/css-skills-diagram/js/skills-diagram.coderbits.js">skills-diagram.coderbits.js</a> (requires jQuery)
+    <pre><code data-language="html">&lt;script src="/js/skills-diagram.coderbits.js"></script></code></pre>
+  </li>
+  <li>Wherever you wish to show the diagram widget, include following HTML:
+    <pre><code data-language="html">&lt;dl class="skills-diagram" data-cb-username="USERNAME" data-cb-subject="SUBJECT"></dl>
+</code></pre>
+    Replace username and subject accordingly. Subject is one of following at
+    the moment of writing (refer to API to see if there are more):
+    <code>skills, languages, environments, frameworks, tools, interests, traits, areas</code>
+  </li>
+</ol>
+
+<h2>Static Demo</h2>
+
+<p>And this is just a simple static HTML/CSS example based on hard-coded data.</p>
 
 <dl class="skills-diagram">
   <dt class="skill-5">UNIX</dt>
@@ -34,8 +93,40 @@
   <dd>2</dd>
 </dl>
 
+<h3>Usage</h3>
+
+<ol>
+  <li>Download and include <a href="http://sergeylukin.com/css-skills-diagram/css/skills-diagram.css">skills-diagram.css</a>
+    <pre><code data-language="html"><link rel="stylesheet"
+    href="/css/skills-diagram.css" /></code></pre>
+  </li>
+  <li>Wherever you wish to show the diagram, include HTML similar to following:
+    <pre><code data-language="html"><dl class="skills-diagram">
+  <dt class="skill-5">UNIX</dt>
+  <dd>5</dd>
+  <dt class="skill-10">Ruby</dt>
+  <dd>10</dd>
+  <dt class="skill-3">Java</dt>
+  <dd>3</dd>
+  <dt class="skill-8">PHP</dt>
+  <dd>8</dd>
+  <dt class="skill-4">RegEx</dt>
+  <dd>4</dd>
+  <dt class="skill-6">HTML5</dt>
+  <dd>6</dd>
+  <dt class="skill-7">JavaScript</dt>
+  <dd>7</dd>
+  <dt class="skill-9">CSS</dt>
+  <dd>9</dd>
+  <dt class="skill-2">C#</dt>
+  <dd>2</dd>
+</dl>
+</code></pre>
+  </li>
+</ol>
+
 <footer>
-  <small>by <a href="http://sergeylukin.com">Sergey Lukin</a> / <a href="http://twitter.com/sergey_lukin">@sergey_lukin</a></small>
+  <small>Created by <a href="http://sergeylukin.com">Sergey Lukin</a> / <a href="http://twitter.com/sergey_lukin">@sergey_lukin</a></small>
 </footer>
 
 <div class="social-buttons">
@@ -53,6 +144,17 @@
 
 <!-- Resize img -->
 <img src="img/resize.png" alt="Resize me!" id="resize" />
+
+<!-- Rainbow Syntax Highlighter -->
+<script src="js/rainbow-custom.min.js"></script>
+
+<script src="js/jquery-1.10.1.min.js"></script>
+
+<!-- SkillsDiagram for Coderbits.com -->
+<script src="js/skills-diagram.coderbits.js"></script>
+
+<!-- Demo app script -->
+<script src="js/demo.js"></script>
 
 <!-- Analytics -->
 <script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-31126253-1']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
