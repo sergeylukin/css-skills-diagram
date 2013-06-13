@@ -4,12 +4,14 @@ $row-width: emCalc(700px);
 
 $body-font-color: #B8BAC2;
 
-$header-font-color: #7c8ea6;
+$header-font-family: 'Raleway';
+$header-font-color: #ccc;
 
 $anchor-font-color: #7C7C7C;
 $anchor-font-color-hover: darken($anchor-font-color, 5%);
 
 $legend-bg: transparent;
 
-$topbar-bg: #E6B4B4;
+$topbar-bg: #fff;
+$topbar-link-color: #ccc;
 

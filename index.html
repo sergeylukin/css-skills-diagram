@@ -12,93 +12,89 @@
 </head>
 <body>
 
-<div class="fixed contain-to-grid">
-  <nav class="top-bar">
-    <ul class="title-area">
-      <!-- Title Area -->
-      <li class="name"></li>
-      <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-      <li class="toggle-topbar menu-icon"><a href="#"><span>&nbsp;</span></a></li>
-    </ul>
-
-    <section class="top-bar-section">
-
-      <!-- Right Nav Section -->
-      <ul class="right">
-        <li class="divider"></li>
-        <li class="active"><a href="#">Demo</a></li>
-        <li class="divider"></li>
-        <li><a href="#">Features</a></li>
-        <li class="divider"></li>
-        <li><a href="#">Usage</a></li>
-        <li class="divider"></li>
-      </ul>
-    </section>
-  </nav>
-</div>
-
-<br/>
-
-<div class="row">
-  <div class="columns">
-
-    <form id="coderbits-diagram-form" class="custom">
-      <div class="row ">
-        <div class="large-3 columns">
-          <label for="cderbits-subject">Display</label>
-          <select id="coderbits-subject" >
-            <option value="skills">Skills</option>
-            <option value="languages">Languages</option>
-            <option value="environments">Environments</option>
-            <option value="frameworks">Frameworks</option>
-            <option value="tools">Tools</option>
-            <option value="interests">Interests</option>
-            <option value="traits">Traits</option>
-            <option value="areas">Areas</option>
-          </select>
-        </div>
-        <div class="large-9 columns">
-          <label for="coderbits-username">for</label>
-          <div class="row collapse">
-            <div class="hide-for-small large-4 columns">
-              <span class="prefix">http://coderbits.com/</span>
-            </div>
-            <div class="large-5 columns">
-              <input type="text" id="coderbits-username" placeholder="<coderbits username>" />
-            </div>
+<header id="header">
+  <section id="live-diagram-nav-section">
+    <div class="row">
+      <div class="columns" style="margin-top: 1em;">
+        <form id="coderbits-diagram-form" class="custom">
+          <div class="row ">
             <div class="large-3 columns">
-              <a href="#" class="button prefix">Submit</a>
-              <!-- <button class="ladda-button small red zoom-in"> -->
-              <!--   <span class="ladda-label">Submit</span> -->
-              <!--   <span class="ladda-spinner"></span> -->
-              <!-- </button> -->
+              <label for="cderbits-subject">Display</label>
+              <select id="coderbits-subject" >
+                <option value="skills">Skills</option>
+                <option value="languages">Languages</option>
+                <option value="environments">Environments</option>
+                <option value="frameworks">Frameworks</option>
+                <option value="tools">Tools</option>
+                <option value="interests">Interests</option>
+                <option value="traits">Traits</option>
+                <option value="areas">Areas</option>
+              </select>
+            </div>
+            <div class="large-7 columns">
+              <label for="coderbits-username">for</label>
+              <div class="row collapse">
+                <div class="hide-for-small large-5 columns">
+                  <span class="prefix">http://coderbits.com/</span>
+                </div>
+                <div class="large-7 columns">
+                  <input type="text" id="coderbits-username" placeholder="<coderbits username>" />
+                </div>
+              </div>
+            </div>
+            <div class="large-2 columns">
+              <span class="unvisible">Submit</span>
+              <div class="row">
+                <div class="columns">
+                  <a href="#" class="button prefix">Render</a>
+                  <!-- <button class="ladda-button small red zoom-in"> -->
+                  <!--   <span class="ladda-label">Submit</span> -->
+                  <!--   <span class="ladda-spinner"></span> -->
+                  <!-- </button> -->
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+        </form>
+
       </div>
-    </form>
+    </div>
+  </section>
 
-    <dl class="skills-diagram">
-      <dt class="skill-5">UNIX</dt>
-      <dd>5</dd>
-      <dt class="skill-10">Ruby</dt>
-      <dd>10</dd>
-      <dt class="skill-3">Java</dt>
-      <dd>3</dd>
-      <dt class="skill-8">PHP</dt>
-      <dd>8</dd>
-      <dt class="skill-4">RegEx</dt>
-      <dd>4</dd>
-      <dt class="skill-6">HTML5</dt>
-      <dd>6</dd>
-      <dt class="skill-7">JavaScript</dt>
-      <dd>7</dd>
-      <dt class="skill-9">CSS</dt>
-      <dd>9</dd>
-      <dt class="skill-2">C#</dt>
-      <dd>2</dd>
-    </dl>
+  <section id="live-diagram-section">
+    <div class="live-diagram-section-container">
+        <dl class="skills-diagram">
+          <dt class="skill-5">UNIX</dt>
+          <dd>5</dd>
+          <dt class="skill-10">Ruby</dt>
+          <dd>10</dd>
+          <dt class="skill-3">Java</dt>
+          <dd>3</dd>
+          <dt class="skill-8">PHP</dt>
+          <dd>8</dd>
+          <dt class="skill-4">RegEx</dt>
+          <dd>4</dd>
+          <dt class="skill-6">HTML5</dt>
+          <dd>6</dd>
+          <dt class="skill-7">JavaScript</dt>
+          <dd>7</dd>
+          <dt class="skill-9">CSS</dt>
+          <dd>9</dd>
+          <dt class="skill-2">C#</dt>
+          <dd>2</dd>
+        </dl>
+    </div>
+  </section>
+</header>
 
+<div id="content">
+  <section id="usage-section">
+    <div class="row text-center">
+      <div class="columns"> 
+        <h2>Usage</h2>
+      </div>
+    </div>
+  </section>
 </div>
 
 <script>
