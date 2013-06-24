@@ -46,11 +46,10 @@
               <span class="unvisible">Submit</span>
               <div class="row">
                 <div class="columns">
-                  <a href="#" class="button prefix">Render</a>
-                  <!-- <button class="ladda-button small red zoom-in"> -->
-                  <!--   <span class="ladda-label">Submit</span> -->
-                  <!--   <span class="ladda-spinner"></span> -->
-                  <!-- </button> -->
+                  <button class="ladda-button small red zoom-in">
+                    <span class="ladda-label">Render</span>
+                    <span class="ladda-spinner"></span>
+                  </button>
                 </div>
               </div>
             </div>
@@ -87,9 +86,86 @@
 
 <div id="content">
   <section id="usage-section">
-    <div class="row text-center">
+    <div class="row">
       <div class="columns"> 
         <h2>Usage</h2>
+
+        <ol>
+          <li>Download and include <a href="http://sergeylukin.com/css-skills-diagram/css/skills-diagram.css">skills-diagram.css</a>
+            <pre><code data-language="html">&lt;link rel="stylesheet" href="/css/skills-diagram.css" /></code></pre>
+          </li>
+          <li>Wherever you wish to show the diagram, include HTML similar to following:
+<pre><code data-language="html">&lt;dl class="skills-diagram">
+  <dt class="skill-5">UNIX</dt>
+  <dd>5</dd>
+  <dt class="skill-10">Ruby</dt>
+  <dd>10</dd>
+  <dt class="skill-3">Java</dt>
+  <dd>3</dd>
+  <dt class="skill-8">PHP</dt>
+  <dd>8</dd>
+  <dt class="skill-4">RegEx</dt>
+  <dd>4</dd>
+  <dt class="skill-6">HTML5</dt>
+  <dd>6</dd>
+  <dt class="skill-7">JavaScript</dt>
+  <dd>7</dd>
+  <dt class="skill-9">CSS</dt>
+  <dd>9</dd>
+  <dt class="skill-2">C#</dt>
+  <dd>2</dd>
+&lt;/dl></code></pre>
+          or download and include <a
+                href="javascripts/skills-diagram.coderbits.js">skills-diagram.coderbits.js</a>
+              (requires jQuery) and add HTML similar to following:
+<pre><code data-language="html">&lt;dl class="skills-diagram" data-coderbits-username="USERNAME" data-coderbits-subject="SUBJECT">&lt;/dl>
+
+&lt;script src="/javascripts/skills-diagram.coderbits.js">&lt;/script></code></pre>
+
+          ..to render diagram based on data from
+          <a href="http://coderbits.com">coderbits.com</a>
+          </li>
+        </ol>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="thanks-section">
+    <div class="row">
+      <div class="columns"> 
+        <h2>Thanks to</h2>
+
+        <ul>
+          <li><a href="http://executebook.com">ExecuteBook</a> for being so
+          inspirational! I did this experiment right after reading it.</li>
+          <li><a href="https://coderbits.com/scott">Scott Smith</a> for
+          great <a href="https://coderbits.com/api">coderbits API</a>
+          and for the idea to connect this diagram to it</li>
+          <li><a href="https://coderbits.com/nedzadarek">Darek Nędza</a> for
+          intensive testing</a></li>
+          <li><a href="https://plus.google.com/107807505287232434305/about">Vernon
+          Adams</a> for lovely font "Oswald" I'm using on this page</a></li>
+          <li><a href="http://subtlepatterns.com/">subtlepatterns.com</a> for lovely
+          texture I'm using here for background.</li>
+          <li>..and everyone who was giving their feedback. Thank you all!</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="todo-section">
+    <div class="row">
+      <div class="columns"> 
+        <h2>TODO</h2>
+
+        <ul>
+          <li>Add caption on hover</li>
+          <li>Support multi lines</li>
+          <li>Drop jQuery from skills-diagram.coderbits.js</li>
+          <li>Find a way to render relatively small values</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -97,7 +173,7 @@
 
 <script>
 document.write('<script src=' +
-  ('__proto__' in {} ? 'javascripts/vendor/zepto' : 'javascripts/vendor/jquery') +
+  ('__proto__' in {} ? 'javascripts/vendor/jquery' : 'javascripts/vendor/jquery') +
   '.js><\/script>')
 </script>
 
@@ -135,5 +211,16 @@ document.write('<script src=' +
 <script>
   $(document).foundation();
 </script>
+
+<script src="javascripts/vendor/rainbow-custom.js"></script>
+
+<script src="javascripts/vendor/ladda.js"></script>
+
+<script src="javascripts/vendor/spin.js"></script>
+
+<script src="javascripts/skills-diagram.coderbits.js"></script>
+
+<script src="javascripts/demo.js"></script>
+
 </body>
 </html>

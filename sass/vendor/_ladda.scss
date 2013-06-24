@@ -14,11 +14,9 @@
 .ladda-button {
   position: relative;
   background: none;
-  border: 0;
-  padding: 0.2em 1em;
-  font-size: 1.3em;
   cursor: pointer;
   overflow: hidden;
+  border-width:1px;
 
   -webkit-appearance: none;
   -webkit-font-smoothing: antialiased;
@@ -28,12 +26,15 @@
     cursor: default;
   }
 
+.ladda-button.small {
+  font-size: 0.875em;
+}
 /* Red button */
 .ladda-button.red {
   background: #ea8557;
   color: #fff;
-  border-radius: 2px;
-  border: 1px solid transparent;
+  border-radius: 1px;
+  border: 1px solid #AA6100;
 }
   .ladda-button.red:hover {
     border-color: rgba( 0, 0, 0, 0.07 );
