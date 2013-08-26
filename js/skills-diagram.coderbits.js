@@ -40,7 +40,7 @@ CBSkillsDiagram.prototype.createDom = function(data) {
   
   
   skill_level = 10; // begin with biggest skill level
-  for (item in attributes) {
+  for (var item in attributes) {
     item = attributes[item];
     items.push({name: item.name, score: item.count, level: skill_level});    
     total_score += item.count;
